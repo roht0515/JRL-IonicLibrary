@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="jrlblue"  routerLink="/products" routerDirection="back">
+        <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button >
+        <ion-icon slot="start" name="search-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="container">
+  <ion-slides pager="true" class="product-slider">
+    <ion-slide>
+      <img src="assets/img/resaltador.jpg" />
+    </ion-slide>
+  </ion-slides>
+
+  <div class="ion-padding-vertical">
+    <h3 class="item-name">Marcador Punta Pincel de Pintura Acrílica uni-POSCA PCF-350 Negro</h3>
+
+    <h4 class="price">
+      Bs.32
+      <span class="real-price">Bs.35</span>
+    </h4>
+  </div>
+
+  <div class="separator">
+    <hr>
+  </div>
+
+  <div class="description">
+    <h5>Descripcion</h5>
+    <p>POSCA Brush permite colorear con su punta pincel los rincones e intersticios más difíciles y realizar trabajos de rellenos y fundidos como con un pincel clásico.
+       Los apasionados de la pintura disfrutarán de la sensación de dibujar con un pincel que combina las cualidades únicas de POSCA; los principiantes aprenderán 
+       fácilmente y sin riesgo las nuevas técnicas.</p>
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-row>
+    <ion-col size="6">
+      <ion-button  expand="full" color="light">
+        Compra ya
+      </ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button  expand="full" color="jrlblue">
+        Añadir al carrito
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

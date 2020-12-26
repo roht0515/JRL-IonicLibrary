@@ -1,0 +1,131 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="jrlstrblue">
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Libreria</ion-title>
+    <ion-title size="small">JRL</ion-title>
+    <ion-buttons slot="end">
+      <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"> 
+      <ion-icon slot="start" name="cart" color="light"></ion-icon></a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="title ion-padding">
+    <h2>Categorias</h2>  
+  </div>
+  <div class="category-slider ion-padding-start">
+    <ion-slides [options]="{ slidesPerView:'auto', zoom: false, grabCursor: true}">
+      <ion-slide>
+        <ion-col>
+          <a  routerLink="/products"> <h4>Artes Plasticas</h4></a>
+          <img src="assets/img/artes.jpg"/>
+        </ion-col>
+      </ion-slide>
+        <ion-slide>
+          <ion-col>
+            <h4>Papeleria</h4>
+            <img src="assets/img/papeleria.jpg"/>
+          </ion-col>
+        </ion-slide>
+        <ion-slide>
+        <ion-col>
+          <h4>Lettering</h4>
+          <img src="assets/img/lettering.jpg"/>
+        </ion-col>
+      </ion-slide>
+      <ion-slide>
+        <ion-col>
+          <h4>Dibujo</h4>
+          <img src="assets/img/Ilustrador.jpg"/>
+        </ion-col>
+      </ion-slide>
+      <ion-slide>
+        <ion-col>
+          <h4>Material Escolar</h4>
+          <img src="assets/img/escolar.jpg"/>
+        </ion-col>
+      </ion-slide>
+      <ion-slide>
+        <ion-col>
+          <h4>Material de Oficina</h4>
+          <img src="assets/img/oficina.jpg"/>
+        </ion-col>
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <div class="title ion-padding">
+    <h2>Productos destacados</h2>  
+  </div>
+  <div class="product-slider ion-padding-start">
+    <ion-slides [options]="{ slidesPerView:'auto', zoom: false, grabCursor: true}">
+      <ion-slide>
+        <ion-col>
+          <img src="assets/img/regla.jpg" alt="logo">
+          <h6>Regla Plegable Maped Open Up (15 a 30 cm) Rosa</h6>
+          <p>Bs. 12.00</p>
+        </ion-col>
+      </ion-slide>
+      <ion-slide>
+        <ion-col>
+          <img src="assets/img/marcadores.jpg" alt="logo">
+          <h6>Set 20 Marcadores Crayola Super Tips</h6>
+          <p>Bs. 48.00</p>
+        </ion-col>
+      </ion-slide>
+        <ion-slide>
+          <ion-col>
+            <img src="assets/img/Colores.jpg" alt="logo">
+            <h6>10 Marcadores Doble Punta Faber-Castell</h6>
+            <p>Bs. 32.00</p>
+          </ion-col>
+        </ion-slide>
+        <ion-slide>
+        <ion-col>
+          <img src="assets/img/lapicero.jpg" alt="logo">
+          <h6>Set de 5 Bolígrafos Trilux Pastel Faber-Castell</h6>
+          <p>Bs. 8.00</p>
+        </ion-col>
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <div class="title ion-padding">
+    <h2>Marcas</h2>  
+  </div>
+  <div class="marca-slider ion-padding-start">
+    <ion-slides [options]="{ slidesPerView:'auto', zoom: false, grabCursor: true}">
+      <ion-slide>
+        <ion-col>
+          <img src="assets/img/artesco.jpg"/>
+        </ion-col>
+      </ion-slide>
+        <ion-slide>
+          <ion-col>
+            <img src="assets/img/bic.jpg"/>
+          </ion-col>
+        </ion-slide>
+        <ion-slide>
+        <ion-col>
+          <img src="assets/img/fabercastell.jpg"/>
+        </ion-col>
+      </ion-slide>
+      <ion-slide>
+        <ion-col>
+          <img src="assets/img/acrilex.jpg"/>
+        </ion-col>
+      </ion-slide>
+      <ion-slide>
+        <ion-col>
+          <img src="assets/img/monami.jpg"/>
+        </ion-col>
+      </ion-slide>
+      <ion-slide>
+        <ion-col>
+          <img src="assets/img/sabonis.jpg"/>
+        </ion-col>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>
