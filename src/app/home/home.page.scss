@@ -1,3 +1,27 @@
+.container{
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;  
+  }
+  img{
+    margin-top: 20px;
+    align-items: center;  
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .page-header h1{
+    color: #0f0d0d;
+    margin-top: 0;
+    text-align: center;
+    font-family:cursive;
+    font-size: 40px;
+    text-shadow: 3px 3px 3px #ababab;
+    
+  }
+ion-title{
+    text-align: center;
+}
 
 .divider {
     display: flex;
@@ -27,13 +51,6 @@
        background: #cccccc;
     }
 }
-
-.auth-form ion-grid,
-.auth-form ion-row {
-    height: 100%;
-    justify-content: center;
-}
-
 .already {
     display: block;
     text-align: center;

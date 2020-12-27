@@ -1,43 +1,50 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="jrlstrblue">
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Sign in User</ion-title>
+    <ion-title>Libreria</ion-title>
+    <ion-title size="small">JRL</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <form>    
-    <ion-item lines="full">
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" #email required></ion-input>
-    </ion-item> 
-
-    <ion-item lines="full">
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" #password required></ion-input>
-    </ion-item>
-
+<ion-content class="ion-padding ion-text-center">
+  <div class="container">
+    <div class="page-header">
+      <h1>Iniciar Sesión</h1>
+    </div>
+    <img src="assets/img/libros.svg" alt="lectura" style="width: 70%;">
+  <form>   
+    <div class="Inputlogin">
+      <ion-item lines="none">
+        <ion-input type="text" #email required placeholder="Correo"></ion-input>
+        <ion-icon name="mail-open-outline" slot="start"></ion-icon>
+      </ion-item> 
+    </div> 
+    <div class="Inputlogin">
+      <ion-item lines="none">
+        <ion-input type="password" #password required placeholder="Contraseña"></ion-input>
+        <ion-icon name="key-outline" slot="start"></ion-icon>
+      </ion-item>
+    </div>
     <ion-row>
       <ion-col> 
-      <ion-button type="submit" (click)="logIn(email, password)" expand="block">Login</ion-button>
+      <ion-button shape="round" color="jrlstrblue" type="submit" (click)="logIn(email, password)" expand="block">Login</ion-button>
       </ion-col>
     </ion-row>
-
     <span class="divider line one-line">or</span>
-
     <ion-row>
       <ion-col> 
         <ion-button 
          type="submit" 
-         color="danger"
+         color="jrlblue"
+         shape="round"
          (click)="authService.GoogleAuth()" 
          expand="block">
            Login with Google
         </ion-button>
       </ion-col>
     </ion-row>
-
   </form>
+</div>
 </ion-content>
