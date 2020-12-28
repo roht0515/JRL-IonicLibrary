@@ -1,36 +1,40 @@
 .container {
-    display: flex;
-    justify-content: center;
-  }
-  .container-padd {
-    display: flex;
-    justify-content: center;
-    padding-top: 2%;
-  }
-  .container-desc {
-    display: flex;
-    justify-content: center;
-    padding-top: 2%;
-    padding-right: 15%;
-    padding-left: 15%;
-    text-align: center;
-  }
-  .final-text {
-    padding-top: 5%;
-    color: #0c3560;
-  }
-  .btn-class {
-    background-color: #00b9f3;
-  }
-  ion-icon {
-    color: #0c3560;
-  }
-  h5 {
-    padding: 0px;
-    margin: 0px;
-    color: #0c3560;
-    font-weight: bold;
-  }
-  ion-title{
-    text-align: center;
-  }
+  display: flex;
+  justify-content: center;
+}
+.container-padd {
+  display: flex;
+  justify-content: center;
+  padding-top: 2%;
+}
+.container-desc {
+  display: flex;
+  justify-content: center;
+  padding-top: 2%;
+  padding-right: 15%;
+  padding-left: 15%;
+  text-align: center;
+}
+.final-text {
+  padding-top: 5%;
+  color: #0c3560;
+}
+.btn-class {
+  background-color: #00b9f3;
+}
+ion-icon {
+  color: #0c3560;
+}
+h5 {
+  padding: 0px;
+  margin: 0px;
+  color: #0c3560;
+  font-weight: bold;
+}
+ion-title {
+  text-align: center;
+}
+#map {
+  width: 100%;
+  height: 50%;
+}
