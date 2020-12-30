@@ -23,59 +23,15 @@
 
   <h1 class="title">Material Escolar</h1>
   <ion-row class="products-items">
-    <ion-col size="6" class="ion-text-left padding-right0">
-      <img src="assets/img/regla.jpg" alt="regla" routerLink="/description-product">
-      <h6>Regla Plegable Maped Open Up (15 a 30 cm) Rosa</h6>
-      <p>Bs. 12.00</p>
+    <ion-col size="6" class="ion-text-left padding-right0" *ngFor="let producto of productos">
+      <img [src]="producto.foto" alt="logo">
+      <h6>{{producto.descripcion}}</h6>
+      <p>Bs. {{producto.precio}}.00</p>
       <ion-button size="small" expand="block" color="jrlstrblue" class="btncomprar">
         <ion-icon name='cart'></ion-icon>
         Comprar
       </ion-button>
-    </ion-col>
-    <ion-col size="6" class="ion-text-left padding-right0">
-      <img src="assets/img/lapicero.jpg" alt="lapicero">
-      <h6>Set de 5 Bolígrafos Trilux Pastel Faber-Castell</h6>
-      <p>Bs. 8.00</p>
-      <ion-button size="small" expand="block" color="jrlstrblue" class="btncomprar">
-        <ion-icon name='cart'></ion-icon>
-        Comprar
-      </ion-button>
-    </ion-col>
-    <ion-col size="6" class="ion-text-left padding-right0">
-      <img src="assets/img/resaltador.jpg" alt="resaltador">
-      <h6>Resaltador STABILO BOSS Pastel – Azul Nublado</h6>
-      <p>Bs. 5.00</p>
-      <ion-button size="small" expand="block" color="jrlstrblue" class="btncomprar">
-        <ion-icon name='cart'></ion-icon>
-        Comprar
-      </ion-button>
-    </ion-col>
-    <ion-col size="6" class="ion-text-left padding-right0">
-      <img src="assets/img/Lapices.jpg" alt="lapices">
-      <h6>Set 12 Lapices STABILO Swano Pastel</h6>
-      <p>Bs. 30.00</p>
-      <ion-button size="small" expand="block" color="jrlstrblue" class="btncomprar">
-        <ion-icon name='cart'></ion-icon>
-        Comprar
-      </ion-button>
-    </ion-col>
-    <ion-col size="6" class="ion-text-left padding-left0">
-      <img src="assets/img/Colores.jpg" alt="colores">
-      <h6>10 Marcadores Doble Punta Faber-Castell</h6>
-      <p>Bs. 32.00</p>
-      <ion-button size="small" expand="block" color="jrlstrblue" class="btncomprar">
-        <ion-icon name='cart'></ion-icon>
-        Comprar
-      </ion-button>
-    </ion-col>
-    <ion-col size="6" class="ion-text-left padding-right0">
-      <img src="assets/img/marcadores.jpg" alt="marcadores">
-      <h6>Set 20 Marcadores Crayola Super Tips</h6>
-      <p>Bs. 48.00</p>
-      <ion-button size="small" expand="block" color="jrlstrblue" class="btncomprar">
-        <ion-icon name='cart'></ion-icon>
-        Comprar
-      </ion-button>
-    </ion-col>
+      </ion-col>
+    
   </ion-row>  
 </ion-content>

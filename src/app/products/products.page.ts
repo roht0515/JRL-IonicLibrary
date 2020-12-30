@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Producto } from '../models';
+import { FirestoreService } from '../services/firestore.service';
 
 @Component({
   selector: 'app-products',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsPage implements OnInit {
 
-  constructor() { }
+  private path = "productos/";
+  productos: Producto [] = [];
+
+  constructor(public firestoreService:FirestoreService) {
+    this.LoadProducts();
+   }
 
   ngOnInit() {
   }
 
+  LoadProducts() {
+    this.firestoreService.getCollection<Producto>(this.path).valueChanges().subscribe(res => {
+      this.productos = res;
+    });
+  }
 }
