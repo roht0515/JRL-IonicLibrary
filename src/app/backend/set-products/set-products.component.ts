@@ -4,6 +4,7 @@ import { FirestoreService } from './../../services/firestore.service';
 import { Component, OnInit, enableProdMode } from '@angular/core';
 import { LoadingController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
+import { AuthenticationService } from 'src/app/shared/authentication-service';
 
 @Component({
   selector: 'app-set-products',
@@ -23,7 +24,9 @@ export class SetProductsComponent implements OnInit {
   constructor(public firestoreService: FirestoreService,
               public loadingController: LoadingController,
               public toastController: ToastController,
-              public firestorageService: FirestorageService) {
+              public firestorageService: FirestorageService,
+              public authService: AuthenticationService
+              ) {
    }
 
   ngOnInit() {
@@ -100,6 +103,7 @@ export class SetProductsComponent implements OnInit {
         console.log(image);
         console.log("entre");
         this.newProduct.foto = image.target.result as string;
+        
       });
       reader.readAsDataURL(event.target.files[0]);
     } else { 

@@ -4,12 +4,9 @@
       Configuracion de productos
     </ion-title>
     <ion-buttons slot="start">
-      <ion-button>
-        <ion-icon slot="icon-only" name="menu-sharp">
-
-        </ion-icon>
-      </ion-button>
+      <ion-menu-button color="dark"></ion-menu-button>
     </ion-buttons>
+    <ion-button type="submit" (click)="authService.SignOut()" expand="block" slot="end" color="dark"><ion-icon name="log-out-outline"></ion-icon></ion-button>
   </ion-toolbar>
 </ion-header>
 
