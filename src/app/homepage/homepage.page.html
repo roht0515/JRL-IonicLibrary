@@ -6,8 +6,10 @@
     <ion-title>Libreria</ion-title>
     <ion-title size="small">JRL</ion-title>
     <ion-buttons slot="end">
-      <a target="_blank" rel="noopener noreferrer" href="#"> 
-      <ion-icon slot="start" name="cart" color="light"></ion-icon></a>
+      <ion-button (click)="redirectCarrito()" class="carrito">
+        <ion-icon slot="start" name="cart" color="light"></ion-icon>
+      <span>{{cantidad}}</span>
+      </ion-button>
       <ion-button type="submit" (click)="authService.SignOut()" expand="block" slot="end"><ion-icon name="log-out-outline"></ion-icon></ion-button>
     </ion-buttons>
   </ion-toolbar>

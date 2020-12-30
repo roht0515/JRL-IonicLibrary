@@ -99,3 +99,16 @@ ion-title{
 a{
     text-decoration: none;
 }
+
+.carrito{
+  span {
+      background-color: #f5576c;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 10%;
+      right: 10%;
+      font-size: 9px;
+  }
+}
