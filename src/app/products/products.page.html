@@ -2,13 +2,18 @@
   <ion-toolbar color="jrlstrblue">
     <ion-buttons slot="start">
       <a routerLink="/homepage" routerDirection="back"> 
-        <ion-icon slot="start" name="arrow-back-outline" color="light"></ion-icon></a>
+        <ion-icon class="carrito"  slot="start" name="arrow-back-outline" color="light">
+          <span>&nbsp;</span>
+        </ion-icon>
+      </a>
     </ion-buttons>
     <ion-title>Libreria <br> JRL</ion-title>
     
     <ion-buttons slot="end">
-      <a routerLink="/carrito"> 
-      <ion-icon slot="start" name="cart" color="light"></ion-icon></a>
+      <ion-button (click)="redirectCarrito()" class="carrito">
+        <ion-icon slot="start" name="cart" color="light"></ion-icon>
+      <span>{{cantidad}}</span>
+      </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -26,7 +31,7 @@
       <img [src]="producto.foto" alt="logo">
       <h6>{{producto.descripcion}}</h6>
       <p>Bs. {{producto.precio}}.00</p>
-      <ion-button size="small" expand="block" color="jrlstrblue" class="btncomprar" (click)="addCarrito(producto)">
+      <ion-button size="small" expand="block" color="jrlstrblue" class="btncomprar" (click)="addCarrito(producto); loadPedido()">
         <ion-icon name='cart'></ion-icon>
         Comprar
       </ion-button>
