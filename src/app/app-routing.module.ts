@@ -1,3 +1,4 @@
+import { SetProductsComponent } from './backend/set-products/set-products.component';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -48,7 +49,9 @@ const routes: Routes = [
     path: 'description-product',
     loadChildren: () => import('./description-product/description-product.module').then( m => m.DescriptionProductPageModule)
   },
-
+  {
+    path: 'set-products', component: SetProductsComponent
+  },
 ];
 
 @NgModule({

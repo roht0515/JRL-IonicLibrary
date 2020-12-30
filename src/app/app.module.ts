@@ -16,18 +16,21 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 
 import { AuthenticationService } from "./../app/shared/authentication-service";
-
+import { BackendModule } from './backend/backend.module';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
     BrowserModule, 
     IonicModule.forRoot(), 
-    AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    BackendModule,
+    AppRoutingModule,
+    AngularFireStorageModule,
   ],
   providers: [
     StatusBar,
