@@ -18,8 +18,10 @@ import { environment } from '../environments/environment';
 import { AuthenticationService } from "./../app/shared/authentication-service";
 import { BackendModule } from './backend/backend.module';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { CarritoitemComponent } from './carritoitem/carritoitem.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,CarritoitemComponent],
   entryComponents: [],
   imports: [
     BrowserModule, 
@@ -31,6 +33,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     BackendModule,
     AppRoutingModule,
     AngularFireStorageModule,
+    ReactiveFormsModule
   ],
   providers: [
     StatusBar,
@@ -38,6 +41,8 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     AuthenticationService,
     AngularFirestoreModule
+  ], exports:[
+    CarritoitemComponent
   ],
   bootstrap: [AppComponent]
 })

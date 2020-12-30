@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="jrlstrblue">
+    <ion-buttons slot="start">
+      <a routerLink="/products" routerDirection="back"> 
+        <ion-icon slot="start" name="arrow-back-outline" color="light"></ion-icon></a>
+    </ion-buttons>
+    <ion-title>Carrito</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div *ngFor="let producto of pedido.productos">
+    <!-- <app-carritoitem [productoPedido]="producto"></app-carritoitem> -->
+    <app-productocarrito [productoPedido]="producto"></app-productocarrito>
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-grid fixed>
+    <ion-row >
+      <ion-col size="6">
+        Cantidad: {{cantidad}}
+      </ion-col>
+      <ion-col size="6">
+        Total: {{total}}Bs.
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-button (click)="pedir()" expand="block">
+    Confirmar compra
+  </ion-button>
+</ion-footer>

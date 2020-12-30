@@ -94,6 +94,7 @@ export class SetProductsComponent implements OnInit {
     });
     this.toast.present();
   }
+  
 
   imageUploaded(event: any) {
     if(event.target.files && event.target.files[0]) {

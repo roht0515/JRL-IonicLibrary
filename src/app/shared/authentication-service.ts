@@ -103,6 +103,12 @@ export class AuthenticationService {
     })
   }
 
+  stateAuth(){
+    return this.ngFireAuth.authState;
+  }
+
+  
+
   // Sign-out 
   SignOut() {
     return this.ngFireAuth.auth.signOut().then(() => {

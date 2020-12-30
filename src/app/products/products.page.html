@@ -4,10 +4,10 @@
       <a routerLink="/homepage" routerDirection="back"> 
         <ion-icon slot="start" name="arrow-back-outline" color="light"></ion-icon></a>
     </ion-buttons>
-    <ion-title>Libreria</ion-title>
-    <ion-title size="small">JRL</ion-title>
+    <ion-title>Libreria <br> JRL</ion-title>
+    
     <ion-buttons slot="end">
-      <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"> 
+      <a routerLink="/carrito"> 
       <ion-icon slot="start" name="cart" color="light"></ion-icon></a>
     </ion-buttons>
   </ion-toolbar>
@@ -26,7 +26,7 @@
       <img [src]="producto.foto" alt="logo">
       <h6>{{producto.descripcion}}</h6>
       <p>Bs. {{producto.precio}}.00</p>
-      <ion-button size="small" expand="block" color="jrlstrblue" class="btncomprar">
+      <ion-button size="small" expand="block" color="jrlstrblue" class="btncomprar" (click)="addCarrito(producto)">
         <ion-icon name='cart'></ion-icon>
         Comprar
       </ion-button>
