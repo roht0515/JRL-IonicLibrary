@@ -51,7 +51,15 @@ const routes: Routes = [
   },
   {
     path: 'set-products', component: SetProductsComponent
+  },  {
+    path: 'carrito',
+    loadChildren: () => import('./carrito/carrito.module').then( m => m.CarritoPageModule)
   },
+  {
+    path: 'itemcarrito',
+    loadChildren: () => import('./itemcarrito/itemcarrito.module').then( m => m.ItemcarritoPageModule)
+  },
+
 ];
 
 @NgModule({

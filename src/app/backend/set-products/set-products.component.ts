@@ -94,6 +94,7 @@ export class SetProductsComponent implements OnInit {
     });
     this.toast.present();
   }
+  
 
   imageUploaded(event: any) {
     if(event.target.files && event.target.files[0]) {
@@ -102,6 +103,8 @@ export class SetProductsComponent implements OnInit {
       reader.onload = ((image) => {
         console.log(image);
         console.log("entre");
+        console.log('holaaa');
+        
         this.newProduct.foto = image.target.result as string;
         
       });
