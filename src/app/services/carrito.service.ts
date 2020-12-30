@@ -36,10 +36,10 @@ export class CarritoService {
 
   loadCarrito(){
     const path='User/'+this.uid+'/'+'carrito';
-    this.firestoreService.getDoc<Pedido>(path,this.uid).subscribe(res => {
+    this.firestoreService.getProduct(path,this.uid).subscribe(res => {
       console.log(res);
       if (res) {
-        this.pedido = res;
+        this.pedido = res as Pedido;
         this.pedido$.next(this.pedido);
       }else{
 
