@@ -19,6 +19,7 @@ export class SetProductsComponent implements OnInit {
   loading: any;
   toast: any;
   newFile = '';
+  filterTerm: string;
   constructor(public firestoreService: FirestoreService,
               public loadingController: LoadingController,
               public toastController: ToastController,
@@ -96,6 +97,8 @@ export class SetProductsComponent implements OnInit {
       this.newFile = event.target.files[0];
       const reader = new FileReader();
       reader.onload = ((image) => {
+        console.log(image);
+        console.log("entre");
         this.newProduct.foto = image.target.result as string;
       });
       reader.readAsDataURL(event.target.files[0]);

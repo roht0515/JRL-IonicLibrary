@@ -11,7 +11,8 @@ export class ProductsPage implements OnInit {
 
   private path = "productos/";
   productos: Producto [] = [];
-
+  filterTerm: string;
+  
   constructor(public firestoreService:FirestoreService) {
     this.LoadProducts();
    }

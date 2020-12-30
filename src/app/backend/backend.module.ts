@@ -3,7 +3,7 @@ import { IonicModule } from '@ionic/angular';
 import { SetProductsComponent } from './set-products/set-products.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,8 @@ import { CommonModule } from '@angular/common';
   imports: [
     CommonModule,
     IonicModule,
-    FormsModule
+    FormsModule,
+    Ng2SearchPipeModule
   ]
 })
 export class BackendModule { }

@@ -85,7 +85,8 @@
       <img [src]="newProduct.foto" style="padding: 2px;" width="98%">
     </ion-item>
   </div>
-  <ion-item *ngFor="let product of productos">
+  <ion-searchbar placeholder="Search..." [(ngModel)]="filterTerm" animated="true"></ion-searchbar>
+  <ion-item *ngFor="let product of productos | filter:filterTerm">
     <ion-label>
       {{product.nombre}}
     </ion-label>

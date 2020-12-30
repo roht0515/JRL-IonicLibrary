@@ -16,14 +16,13 @@
  
   <div class="search">
     <ion-item lines="none">
-      <ion-input placeholder="Buscar"></ion-input>
+      <ion-input placeholder="Buscar" [(ngModel)]="filterTerm" animated="true"></ion-input>
       <ion-icon name="search-outline" slot="start"></ion-icon>
     </ion-item>
   </div>
-
   <h1 class="title">Material Escolar</h1>
   <ion-row class="products-items">
-    <ion-col size="6" class="ion-text-left padding-right0" *ngFor="let producto of productos">
+    <ion-col size="6" class="ion-text-left padding-right0" *ngFor="let producto of productos | filter:filterTerm">
       <img [src]="producto.foto" alt="logo">
       <h6>{{producto.descripcion}}</h6>
       <p>Bs. {{producto.precio}}.00</p>
