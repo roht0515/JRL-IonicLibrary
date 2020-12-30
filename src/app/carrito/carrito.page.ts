@@ -25,6 +25,7 @@ export class CarritoPage implements OnInit, OnDestroy {
   ngOnInit() {
   }
 
+  
   ngOnDestroy(){
     console.log('destrooy');
     if (this.carritoSuscriber) {
