@@ -1,0 +1,105 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Configuracion de productos
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon slot="icon-only" name="menu-sharp">
+
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="text-align:end; margin: 10px;">
+    <ion-button (click)="newProd()" color="dark" slot="">nuevo</ion-button>
+  </div>
+ 
+  <div *ngIf="enabledNewProduct">
+    <ion-item>
+      <ion-buttons slot="end">
+        <ion-button (click)=" enabledNewProduct = false;">
+          <ion-icon name="close"></ion-icon>
+        </ion-button>
+        <ion-button (click)="saveProduct()">
+          <ion-icon name="save-sharp"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+    <h3>Ingrese los datos del producto</h3>
+    <ion-item>
+      <ion-label>Codigo:
+      </ion-label>
+      <ion-input [(ngModel)]="newProduct.codigo" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Foto</ion-label>
+      <ion-buttons slot="end">
+        <ion-button>
+          <label for="file-upload">
+            <ion-icon slot="icon-only" name="images"></ion-icon>
+          </label>
+           <input (change)="imageUploaded($event);" id="file-upload" style="display: none;" type="file" accept="image/*">
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+    <ion-item>
+      <ion-label>Descripcion:
+      </ion-label>
+      <ion-input [(ngModel)]="newProduct.descripcion" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nombre:
+      </ion-label>
+      <ion-input [(ngModel)]="newProduct.nombre" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Cantidad:
+      </ion-label>
+      <ion-input [(ngModel)]="newProduct.cantidad" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Precio:
+      </ion-label>
+      <ion-input [(ngModel)]="newProduct.precio" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>fecha:
+      </ion-label>
+      <ion-input [(ngModel)]="newProduct.fecha" type="date" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Id categoria:
+      </ion-label>
+      <ion-select [(ngModel)]="newProduct.id_categoria">
+        <ion-select-option value="123">escolar</ion-select-option>
+        <ion-select-option value="124">trabajo</ion-select-option>
+        <ion-select-option value="125">oficina</ion-select-option>
+        <ion-select-option value="126">universidad</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <img [src]="newProduct.foto" style="padding: 2px;" width="98%">
+    </ion-item>
+  </div>
+  <ion-item *ngFor="let product of productos">
+    <ion-label>
+      {{product.nombre}}
+    </ion-label>
+    <ion-buttons slot="end">
+      <ion-button (click)=" newProduct = product; enabledNewProduct = true; newImage= ''">
+        <ion-icon slot="icon-only" color="primary" name="create-sharp">
+        </ion-icon>
+      </ion-button>
+      <ion-button (click)="deleteProduct(product);">
+        <ion-icon slot="icon-only" color="danger" name="trash-bin">
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-item>
+
+
+</ion-content>
