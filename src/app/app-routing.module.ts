@@ -1,6 +1,7 @@
 import { SetProductsComponent } from './backend/set-products/set-products.component';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { MispedidosComponent } from './mispedidos/mispedidos.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -51,7 +52,11 @@ const routes: Routes = [
   },
   {
     path: 'set-products', component: SetProductsComponent
-  },  {
+  },
+  {
+    path: 'mis-pedidos', component: MispedidosComponent
+  },
+  {
     path: 'carrito',
     loadChildren: () => import('./carrito/carrito.module').then( m => m.CarritoPageModule)
   },

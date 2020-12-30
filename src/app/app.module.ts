@@ -20,8 +20,9 @@ import { BackendModule } from './backend/backend.module';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { CarritoitemComponent } from './carritoitem/carritoitem.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MispedidosComponent } from './mispedidos/mispedidos.component';
 @NgModule({
-  declarations: [AppComponent,CarritoitemComponent],
+  declarations: [AppComponent,CarritoitemComponent,MispedidosComponent],
   entryComponents: [],
   imports: [
     BrowserModule, 
