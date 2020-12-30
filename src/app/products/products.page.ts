@@ -1,3 +1,6 @@
+import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { Pedido } from './../models';
 import { Component, Input, OnInit } from '@angular/core';
 import { Producto } from '../models';
 import { CarritoService } from '../services/carrito.service';
@@ -14,8 +17,12 @@ export class ProductsPage implements OnInit {
   private path = "productos/";
   productos: Producto [] = [];
   filterTerm: string;
-  constructor(public firestoreService:FirestoreService, public carritoService:CarritoService) {
+  pedido:Pedido;
+  carritoSuscriber: Subscription;
+  cantidad: number;
+  constructor(public firestoreService:FirestoreService, public carritoService:CarritoService, public router: Router) {
     this.LoadProducts();
+    this.loadPedido();
    }
 
   ngOnInit() {
@@ -30,5 +37,24 @@ export class ProductsPage implements OnInit {
 
   addCarrito(producto: Producto){
     this.carritoService.addProducto(producto);
+  }
+
+  loadPedido(){
+    this.carritoSuscriber= this.carritoService.getCarrito().subscribe(res =>{
+      console.log('loadPedido() en carrito')
+      this.pedido=res;
+      this.getCantidad();
+    });
+  }
+
+  getCantidad(){
+    this.cantidad = 0
+    this.pedido.productos.forEach( producto =>{
+      this.cantidad=  producto.cantidad + this.cantidad;
+    })
+  }
+
+  redirectCarrito(){
+    this.router.navigate(["carrito"]);
   }
 }
